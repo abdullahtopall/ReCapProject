@@ -13,7 +13,7 @@ namespace DataAccess.Concrete.EntityFramework
     {
         public void Add(Car entity)
         {
-            using (ReCapDatabaseContext context = new ReCapDatabaseContext())
+            using (CarRentalContext context = new CarRentalContext())
             {
                 var addedEntity = context.Entry(entity);
                 addedEntity.State = EntityState.Added;
@@ -23,7 +23,7 @@ namespace DataAccess.Concrete.EntityFramework
 
         public void Delete(Car entity)
         {
-            using (ReCapDatabaseContext context = new ReCapDatabaseContext())
+            using (CarRentalContext context = new CarRentalContext())
             {
                 var deletedEntity = context.Entry(entity);
                 deletedEntity.State = EntityState.Deleted;
@@ -33,7 +33,7 @@ namespace DataAccess.Concrete.EntityFramework
 
         public Car Get(Expression<Func<Car, bool>> filter)
         {
-            using (ReCapDatabaseContext context = new ReCapDatabaseContext())
+            using (CarRentalContext context = new CarRentalContext())
             {
                 return context.Set<Car>().SingleOrDefault(filter);
             }
@@ -41,17 +41,17 @@ namespace DataAccess.Concrete.EntityFramework
 
         public List<Car> GetAll(Expression<Func<Car, bool>> filter = null)
         {
-            using (ReCapDatabaseContext context = new ReCapDatabaseContext())
+            using (CarRentalContext context = new CarRentalContext())
             {
-                return filter == null
-                  ? context.Set<Car>().ToList()
-                  : context.Set<Car>().Where(filter).ToList();
+                return filter == null 
+                    ? context.Set<Car>().ToList() 
+                    : context.Set<Car>().Where(filter).ToList();
             }
         }
 
         public void Update(Car entity)
         {
-            using (ReCapDatabaseContext context = new ReCapDatabaseContext())
+            using (CarRentalContext context = new CarRentalContext())
             {
                 var updatedEntity = context.Entry(entity);
                 updatedEntity.State = EntityState.Modified;

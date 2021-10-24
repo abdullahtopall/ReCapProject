@@ -6,15 +6,16 @@ using System.Text;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class ReCapDatabaseContext : DbContext
+    public class CarRentalContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=ReCapDatabase;Trusted_Connection=true");
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=CarRental;Trusted_Connection=true");
         }
 
         public DbSet<Car> Cars { get; set; }
-        public DbSet<Color> Colors { get; set; }
         public DbSet<Brand> Brands { get; set; }
+        public DbSet<Color> Colors { get; set; }
+
     }
 }
