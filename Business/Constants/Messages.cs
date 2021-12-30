@@ -20,11 +20,11 @@ namespace Business.Constants
         public static string BrandNameInvalid = "Marka ismi geçersiz";
         public static string BrandsListed = "Arabalar listelendi";
 
-        public static string ColorAdded = "Marka eklendi";
-        public static string ColorDeleted = "Marka silindi";
-        public static string ColorUpdated = "Marka güncellendi";
-        public static string ColorNameInvalid = "Marka ismi geçersiz";
-        public static string ColorsListed = "Arabalar listelendi";
+        public static string ColorAdded = "Renk eklendi";
+        public static string ColorDeleted = "Renk silindi";
+        public static string ColorUpdated = "Renk güncellendi";
+        public static string ColorNameInvalid = "Renk geçersiz";
+        public static string ColorsListed = "Renkler listelendi";
 
         public static string CustomerAdded = "Müşteri eklendi";
         public static string CustomerDeleted = "Müşteri silindi";
